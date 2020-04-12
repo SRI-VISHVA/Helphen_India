@@ -22,7 +22,7 @@ from Kinder.views import kinder_contact_form
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('helphen/', home_contact_form, name='home'),
+    path('', home_contact_form, name='home'),
     path('helphen/events/', events, name='events'),
     path('helphen/rxd/', rxd, name='rxd'),
     path('helphen/pp/', pp, name='pp'),
