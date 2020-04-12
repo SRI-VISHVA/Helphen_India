@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'basic.html' %}
+    {% block title %}Project Kinder{% endblock %}
+</head>
+<body>
+{% load static %}
+{% block body1 %}
+        <h1>Project Kinder</h1>
+        <h3>Volunteer Form</h3>
+            <form class="form-horizontal" action="" method = "post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+                </div>
+            </form>
+{% endblock %}
+{% block body2 %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title>Helphen India</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description"
+          content="It is an official website of Helphen India">
+    <meta name="author" content="Helphen India">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <!-- Font awesome CSS -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- header -->
+    <header>
+        <!-- navigation -->
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'home' %}"><img class="img-responsive" src="{% static 'img/logo.png' %}" alt="Logo"/></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="#work">Works</a></li>
+                        <li class="dropdown">
+                            <a href="{% url 'home' %}" class="dropdown-toggle" data-toggle="dropdown">Department <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="{% url 'events' %}">Events</a></li>
+                                <li><a href="{% url 'rxd' %}">RxD</a></li>
+                                <li><a href="{% url 'pp' %}">Project Prayas</a></li>
+                                <li><a href="{% url 'pk' %}">Project Kinder</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+
+    <!-- banner -->
+    <div class="banner">
+        <div class="container">
+            <!-- heading -->
+            <h2 style="color: black">Helphen aspires to be agents of change in the lives of children, youth, women and the under-privileged.
+				With the unique development initiatives, Helphen focuses on uplifting the deprived and ensuring that all
+				around us live a life well lived.</h2>
+            <!-- sub heading -->
+            <h3 style="color: orangered">Ingniting Little Dreams</h3>
+            <!-- access button -->
+            <a href="#work" class="btn btn-default">SEE OUR WORKS</a>
+        </div>
+    </div>
+    <!-- banner end -->
+
+    <!-- works -->
+    <div class="works" id="work">
+        <div class="container">
+            <!-- default heading -->
+            <div class="default-heading">
+                <!-- heading -->
+                <h2><a href="{% url 'work' %}">Our Works</a></h2>
+                <!-- paragraph -->
+                <p>Information about Project Prayas, Project Kinder, Events, RxD</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <!-- work item -->
+                    <div class="work-item">
+                        <!-- work details image -->
+                        <img class="img-responsive" src="{% static 'img/work/Events_400x350.png' %}" alt=""/>
+                        <!-- heading -->
+                        <h3><a href="{% url 'events' %}">Events</a></h3>
+                        <!-- brand org -->
+                        <span class="org">The event organising team of Helphen India</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!-- work item -->
+                    <div class="work-item">
+                        <!-- work details image -->
+                        <img class="img-responsive" src="{% static 'img/work/RxD_400x350.png' %}" alt=""/>
+                        <!-- heading -->
+                        <h3><a href="RxD.html">Research and Development</a></h3>
+                        <!-- brand org -->
+                        <span class="org">The Rxd team of Helphen India</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!-- work item -->
+                    <div class="work-item">
+                        <!-- work details image -->
+                        <img class="img-responsive" src="{% static 'img/work/Prayas_400x350.png' %}" alt=""/>
+                        <!-- heading -->
+                        <h3><a href="{% url 'pp' %}">Project Prayas</a></h3>
+                        <!-- brand org -->
+                        <span class="org">The survey and school</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!-- work item -->
+                    <div class="work-item">
+                        <!-- work details image -->
+                        <img class="img-responsive" src="{% static 'img/work/Kinder_400x350.png' %}" alt=""/>
+                        <!-- heading -->
+                        <h3><a href="{% url 'pk' %}">Project Kinder</a></h3>
+                        <!-- brand org -->
+                        <span class="org">The kinder desc</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- team -->
+    <div class="team" id="team">
+        <div class="container">
+            <!-- default heading -->
+            <div class="default-heading">
+                <!-- heading -->
+                <h2><a href="{% url 'team' %}">Our Team</a></h2>
+                <!-- paragraph -->
+                <p>The Team Head</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <!-- team member -->
+                    <div class="member">
+                        <!-- team member image -->
+                        <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
+                             alt="Staff-Profile-User-4" border="0">
+                        <!-- member details / heading -->
+                        <h4 style="color: orangered">Risav Gosami</h4>
+                        <!-- paragraph -->
+                        <p>President</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!-- team member -->
+                    <div class="member">
+                        <!-- team member image -->
+                        <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
+                             alt="Staff-Profile-User-4" border="0">
+                        <!-- member details / heading -->
+                        <h4 style="color: orangered">Dhruva Kumar</h4>
+                        <!-- paragraph -->
+                        <p>Vice President</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!-- team member -->
+                    <div class="member">
+                        <!-- team member image -->
+                        <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
+                             alt="Staff-Profile-User-4" border="0">
+                        <!-- member details / heading -->
+                        <h4 style="color: orangered">Adithiya</h4>
+                        <!-- paragraph -->
+                        <p>General Secretary</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!-- team member -->
+                    <div class="member">
+                        <!-- team member image -->
+                        <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
+                             alt="Staff-Profile-User-4" border="0">
+                        <!-- member details / heading -->
+                        <h4 style="color: orangered">Shrey Jaiswal</h4>
+                        <!-- paragraph -->
+                        <p>Events Head</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!-- team member -->
+                    <div class="member">
+                        <!-- team member image -->
+                        <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
+                             alt="Staff-Profile-User-4" border="0">
+                        <!-- member details / heading -->
+                        <h4 style="color: orangered">Pramit Paul</h4>
+                        <!-- paragraph -->
+                        <p>Prayas Head</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!-- team member -->
+                    <div class="member">
+                        <figure>
+                        <!-- team member image -->
+                        <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
+                             alt="Staff-Profile-User-4" border="0">
+                        <!-- member details / heading -->
+                            <figcaption>
+                        <h4 style="color: orangered">Priyanshi Chauhan</h4>
+                        <!-- paragraph -->
+                        <p>Kinder Head</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!-- team member -->
+                    <div class="member">
+                        <!-- team member image -->
+                        <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
+                             alt="Staff-Profile-User-4" border="0">
+                        <!-- member details / heading -->
+                        <h4 style="color: orangered">Garvit Bhateja</h4>
+                        <!-- paragraph -->
+                        <p>Events Head</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <!-- team member -->
+                    <div class="member">
+                        <!-- team member image -->
+                        <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
+                             alt="Staff-Profile-User-4" border="0">
+                        <!-- member details / heading -->
+                        <h4 style="color: orangered">Adya Saxena</h4>
+                        <!-- paragraph -->
+                        <p>PR head</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <!-- default heading -->
+            <div class="default-heading">
+                <!-- heading -->
+                <h2>Contact Us</h2>
+                <!-- paragraph -->
+                <h4>Helphen India</h4>
+            </div>
+            <!-- contact container -->
+            <div class="contact-container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-6">
+                        <!-- heading -->
+                        <h3>Contact Form</h3>
+                        <form role="form" id="contactForm" method="post">
+                            <div class="form-group">
+                                <label for="contactName">Name</label>
+                                <input class="form-control" type="text" id="contactName" name="contactName"
+                                       placeholder="Enter Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email</label>
+                                <input class="form-control" type="email" id="contactEmail" name="contactEmail"
+                                       placeholder="Enter Email"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Message</label>
+                                <textarea class="form-control" id="contactMessage" name="contactMessage" rows="3"
+                                          placeholder="Enter Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" name="submit" id="submit" class="btn btn-default">Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <!-- heading -->
+                        <h3>Address</h3>
+                        <!-- paragraph -->
+                        <p class="address">VIT UNIVERSITY- Vellore Campus,<br>
+                            Tiruvalam Rd, Katpadi, Vellore,<br>
+                            Tamil Nadu 632014</p>
+                        <br>
+                        <!-- heading -->
+                        <h3>Phone</h3>
+                        <!-- paragraph -->
+                        <p class="address">+91-9999999999</p>
+                        <br>
+                        <!-- heading -->
+                        <h3>Email</h3>
+                        <!-- paragraph -->
+                        <p class="address"><a href="mailto:helphenindia@gmail.com">helphenindia@gmail.com</a></p>
+                    </div>
+                    <!--Map-->
+                    <div class="col-md-4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15552.006785120562!2d79.1594165!3d12.971743!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfef222e5f36ecdeb!2sVellore%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1585570457634!5m2!1sen!2sin" height="310" width="380"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p><a href="{% url 'home' %}">Home</a> | <a href="{% url 'work' %}">works</a> | <a href="{% url 'team' %}">Team</a> | <a
+                    href="#contact">Contact</a></p>
+            <!-- logo image -->
+            <img class="img-responsive" src="{% static 'img/logo.png' %}" alt=""/>
+            <div class="social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+            </div>
+            <p class="copy-right">Copyright &copy; 2020 <a href="{% url 'home' %}">Helphen India</a>, All rights reserved. </p>
+        </div>
+    </footer>
+
+</div>
+
+<!-- Javascript files -->
+<!-- jQuery -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- Respond JS for IE8 -->
+<script src="{% static 'js/respond.min.js' %}"></script>
+<!-- HTML5 Support for IE -->
+<script src="{% static 'js/html5shiv.js' %}"></script>
+<!-- Custom JS -->
+<script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>
