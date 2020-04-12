@@ -25,7 +25,7 @@ SECRET_KEY = 'x^i(1=uv$0k5k&ld6__2(tdiq+r9h--c87yw*6^s7yar#1^jl+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
