@@ -29,7 +29,7 @@ urlpatterns = [
     path('pk/', kinder_contact_form, name='pk'),
     path('work/', work, name='work'),
     path('team/', team, name='team'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]
 
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,
