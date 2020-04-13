@@ -23,15 +23,14 @@ from Kinder.views import kinder_contact_form
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_contact_form, name='home'),
-    path('/events/', events, name='events'),
-    path('/rxd/', rxd, name='rxd'),
-    path('/pp/', pp, name='pp'),
-    path('/pk/', kinder_contact_form, name='pk'),
-    path('/work/', work, name='work'),
-    path('/team/', team, name='team'),
-]
+    path('events/', events, name='events'),
+    path('rxd/', rxd, name='rxd'),
+    path('pp/', pp, name='pp'),
+    path('pk/', kinder_contact_form, name='pk'),
+    path('work/', work, name='work'),
+    path('team/', team, name='team'),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,
                               document_root=settings.MEDIA_ROOT)
-        urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
