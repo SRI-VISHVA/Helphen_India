@@ -21,15 +21,19 @@ def work(request):
     return render(request, template_name='works.html')
 
 # Team's View
-def team(request):
-    return render(request, template_name='Team.html')
+def contact(request):
+    return render(request, template_name='contact.html')
+
+# Sponsorship's View
+def sponsor(request):
+    return render(request, template_name='sponsors.html')
 
 
 def home_contact_form(request):
     if request.method == 'POST':
         name = request.POST['contactName']
         email_id = request.POST['contactEmail']
-        r = request.POST['contactMessage']
+        message = request.POST['contactMessage']
         x = Contact(name=name, email_id=email_id, message=message)
         x.save()
         return redirect('home')

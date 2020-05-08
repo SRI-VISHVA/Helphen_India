@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'basic.html' %}
+    {% block title %}Payment Home{% endblock %}
+</head>
+<body>
+{% load static %}
+{% block body1 %}
+    <h2>Payment Home</h2>
+    {% if error %}
+        <h3>{{ error }}</h3>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username: </label>
+        <input type="text" name="username" required>
+        <label for="password">Password: </label>
+        <input type="password" name="password" required>
+        <label for="amount">Amount: </label>
+        <input type="number" name="amount" value="100">
+        <input type="submit" name="submit" value="Submit" required>
+    </form>
+{% endblock %}
+{% block body2 %}
+
+{% endblock %}
+</body>
+</html>

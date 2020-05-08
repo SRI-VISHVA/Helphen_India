@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'basic.html' %}
+    {% block title %}Conformation{% endblock %}
+</head>
+<body>
+{% load static %}
+{% block body1 %}
+    <h2>Callback Messsage: </h2>                    <br>
+    <h3> Checksum Verification: {{ message }} </h3> <br>
+    MID: {{ MID }} <br>
+    TXNID: {{ TXNID }} <br>
+    ORDERID: {{ ORDERID }} <br>
+    BANKTXNID: {{ BANKTXNID }} <br>
+    TXNAMOUNT: {{ TXNAMOUNT }} <br>
+    CURRENCY: {{ CURRENCY }} <br>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <h1>
+                    <li class="{{ message.tags }}">{{ message }}</li>
+                </h1>
+                <li><a href="{% url 'home' %}">Print</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <br>
+    <h3> STATUS: {{ STATUS }} </h3>                 <br>
+    RESPCODE: {{ RESPCODE }} <br>
+    RESPMSG: {{ RESPMSG }} <br>
+    TXNDATE: {{ TXNDATE }} <br>
+    GATEWAYNAME: {{ GATEWAYNAME }} <br>
+    BANKNAME: {{ BANKNAME }} <br>
+    BIN_NAME: {{ BIN_NAME }} <br>
+    PAYMENTMODE: {{ PAYMENTMODE }} <br>
+    CHECKSUMHASH: {{ CHECKSUMHASH }}
+{% endblock %}
+{% block body2 %}
+
+{% endblock %}
+</body>
+</html>

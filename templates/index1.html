@@ -19,6 +19,9 @@
     <!-- Custom CSS -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
+    <link rel='shortcut icon' type='image/x-icon' href='{% static 'img/favicon.ico' %}' />
+
+
 </head>
 
 <body>
@@ -57,7 +60,8 @@
                                 <li><a href="{% url 'pk' %}">Project Kinder</a></li>
                             </ul>
                         </li>
-                        <li><a href="#team">Team</a></li>
+                        <li><a href="#team">Sponsors</a></li>
+                        <li><a href="{% url 'pay' %}">Donate</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -139,15 +143,15 @@
         </div>
     </div>
 
-    <!-- team -->
+    <!-- Sponsors -->
     <div class="team" id="team">
         <div class="container">
             <!-- default heading -->
             <div class="default-heading">
                 <!-- heading -->
-                <h2><a href="{% url 'team' %}">Our Team</a></h2>
+                <h2><a href="{% url 'sponsor' %}">Our Sponsors</a></h2>
                 <!-- paragraph -->
-                <p>The Team Head</p>
+                <p>Sponsorship 2020</p>
             </div>
             <div class="row">
                 <div class="col-md-3">
@@ -157,9 +161,9 @@
                         <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
                              alt="Staff-Profile-User-4" border="0">
                         <!-- member details / heading -->
-                        <h4 style="color: orangered">Risav Gosami</h4>
+                        <h4 style="color: orangered">Company 1 url</h4>
                         <!-- paragraph -->
-                        <p>President</p>
+                        <p>Company 1</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -169,9 +173,9 @@
                         <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
                              alt="Staff-Profile-User-4" border="0">
                         <!-- member details / heading -->
-                        <h4 style="color: orangered">Dhruva Kumar</h4>
+                        <h4 style="color: orangered">Company 2 url</h4>
                         <!-- paragraph -->
-                        <p>Vice President</p>
+                        <p>Company 2</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -181,9 +185,9 @@
                         <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
                              alt="Staff-Profile-User-4" border="0">
                         <!-- member details / heading -->
-                        <h4 style="color: orangered">Adithiya</h4>
+                        <h4 style="color: orangered">Company 3 url</h4>
                         <!-- paragraph -->
-                        <p>General Secretary</p>
+                        <p>Company 3</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -193,9 +197,9 @@
                         <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
                              alt="Staff-Profile-User-4" border="0">
                         <!-- member details / heading -->
-                        <h4 style="color: orangered">Shrey Jaiswal</h4>
+                        <h4 style="color: orangered">Company 4 url</h4>
                         <!-- paragraph -->
-                        <p>Events Head</p>
+                        <p>Company 4</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -205,9 +209,9 @@
                         <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
                              alt="Staff-Profile-User-4" border="0">
                         <!-- member details / heading -->
-                        <h4 style="color: orangered">Pramit Paul</h4>
+                        <h4 style="color: orangered">Company 5 url</h4>
                         <!-- paragraph -->
-                        <p>Prayas Head</p>
+                        <p>Company 5</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -219,9 +223,9 @@
                              alt="Staff-Profile-User-4" border="0">
                         <!-- member details / heading -->
                             <figcaption>
-                        <h4 style="color: orangered">Priyanshi Chauhan</h4>
+                        <h4 style="color: orangered">Company 6 url</h4>
                         <!-- paragraph -->
-                        <p>Kinder Head</p>
+                        <p>Company 6</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -233,9 +237,9 @@
                         <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
                              alt="Staff-Profile-User-4" border="0">
                         <!-- member details / heading -->
-                        <h4 style="color: orangered">Garvit Bhateja</h4>
+                        <h4 style="color: orangered">Company 7 url</h4>
                         <!-- paragraph -->
-                        <p>Events Head</p>
+                        <p>Company 7</p>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -245,22 +249,21 @@
                         <img class="img-responsive" src="https://i.ibb.co/R3Z5Ldt/Staff-Profile-User-4.png"
                              alt="Staff-Profile-User-4" border="0">
                         <!-- member details / heading -->
-                        <h4 style="color: orangered">Adya Saxena</h4>
+                        <h4 style="color: orangered">Company 8 url</h4>
                         <!-- paragraph -->
-                        <p>PR head</p>
+                        <p>Company 8</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- contact -->
     <div class="contact" id="contact">
         <div class="container">
             <!-- default heading -->
             <div class="default-heading">
                 <!-- heading -->
-                <h2>Contact Us</h2>
+                <h2><a href="{% url 'contact' %}">Contact Us</a></h2>
                 <!-- paragraph -->
                 <h4>Helphen India</h4>
             </div>
@@ -321,7 +324,7 @@
 
     <footer>
         <div class="container">
-            <p><a href="{% url 'home' %}">Home</a> | <a href="{% url 'work' %}">works</a> | <a href="{% url 'team' %}">Team</a> | <a
+            <p><a href="{% url 'home' %}">Home</a> | <a href="{% url 'work' %}">works</a> | <a href="{% url 'pay' %}">Donate</a> | <a
                     href="#contact">Contact</a></p>
             <!-- logo image -->
             <img class="img-responsive" src="{% static 'img/logo.png' %}" alt=""/>

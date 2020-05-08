@@ -14,24 +14,25 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import events, rxd, pp, work, team, home_contact_form
+from .views import events, rxd, pp, work, contact, home_contact_form, sponsor
 from Kinder.views import kinder_contact_form
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', home_contact_form, name='home'),
-    path('events/', events, name='events'),
-    path('rxd/', rxd, name='rxd'),
-    path('pp/', pp, name='pp'),
-    path('pk/', kinder_contact_form, name='pk'),
-    path('work/', work, name='work'),
-    path('team/', team, name='team'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+                  path('admin/', admin.site.urls),
+                  path('', home_contact_form, name='home'),
+                  path('events/', events, name='events'),
+                  path('rxd/', rxd, name='rxd'),
+                  path('pp/', pp, name='pp'),
+                  path('pk/', kinder_contact_form, name='pk'),
+                  path('work/', work, name='work'),
+                  path('industry/', sponsor, name='sponsor'),
+                  path('contact/', contact, name='contact'),
+                  path('donate/', include('Payments.urls'), name='payment'),
+              ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
-        urlpatterns += static(settings.MEDIA_URL,
-                              document_root=settings.MEDIA_ROOT)
-        
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

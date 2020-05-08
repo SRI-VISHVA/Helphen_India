@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends 'basic.html' %}
+    {% block title %}Merchant Check Out Page{% endblock %}
+</head>
+<body>
+{% load static %}
+{% block body1 %}
+    <h1>Please do not refresh this page...</h1>
+    <form method="post" action="https://securegw-stage.paytm.in/order/process" name="f1">
+        {% for key, value in param_dict.items %}
+            <input type="hidden" name="{{key}}" value="{{value}}">
+        {% endfor %}
+    </form>
+    <script>
+            document.f1.submit();
+    </script>
+{% endblock %}
+{% block body2 %}
+
+{% endblock %}
+</body>
+
+</html>
